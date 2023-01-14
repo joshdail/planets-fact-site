@@ -1,0 +1,390 @@
+/* CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+menu,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  all: unset;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --vw-default: 1110px;
+  --ff-header: "Antonio", sans-serif;
+  --ff-sans: "League Spartan", sans-serif;
+  --fw-header: 700;
+  --fw-normal: 400;
+  --clr-grey-medium: #838391;
+  --clr-grey-dark: #38384f;
+  --clr-translucent: rgba(255, 255, 255, 0.5);
+  --clr-midnight: #070724;
+  --clr-mercury: #419ebb;
+  --clr-venus: #eda249;
+  --clr-earth: #6f2ed6;
+  --clr-mars: #d14c32;
+  --clr-jupiter: #d83a34;
+  --clr-saturn: #cd5120;
+  --clr-uranus: #1ec2a4;
+  --clr-neptune: #2d68f0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("./assets/background-stars.svg");
+  background-color: var(--clr-midnight);
+  color: #fff;
+  font-weight: var(--fw-normal);
+  font-family: var(--ff-sans);
+  line-height: 1.563rem;
+}
+
+/* Design system */
+
+h1,
+h2 {
+  font-weight: var(--fw-normal);
+  font-family: var(--ff-header);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 6.438rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  letter-spacing: -1.5px;
+}
+
+h3,
+h4,
+.btn {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-header);
+  text-transform: uppercase;
+}
+
+h3,
+.btn {
+  font-size: 0.75rem;
+  letter-spacing: 2.6px;
+}
+
+h4,
+li {
+  font-size: 0.688rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+li {
+  cursor: pointer;
+  position: relative;
+  opacity: 0.75;
+}
+
+.border {
+  border: 1px solid var(--clr-grey-dark);
+}
+
+.btn {
+  width: 21.875rem;
+  padding-block: 0.75rem;
+  padding-left: 1.75rem;
+  cursor: pointer;
+  opacity: 1;
+  border: 1px solid var(--clr-translucent);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--clr-grey-dark);
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+/* Rather than try to get li marker to work, */
+/* this span will be used to put the numbers */
+/* in manually since there aren't that many  */
+
+.btn-inline-counter {
+  display: inline-block;
+  margin-right: 1rem;
+  color: var(--clr-translucent);
+}
+
+/* Color classes for planet themes */
+
+.bg-mercury,
+.btn-mercury.active,
+.li-mercury::before {
+  background-color: var(--clr-mercury);
+  outline: none;
+}
+
+.bg-venus,
+.btn-venus.active,
+.li-venus::before {
+  background-color: var(--clr-venus);
+  outline: none;
+}
+
+.bg-earth,
+.btn-earth.active,
+.li-earth::before {
+  background-color: var(--clr-earth);
+  outline: none;
+}
+
+.bg-mars,
+.btn-mars.active,
+.li-mars::before {
+  background-color: var(--clr-mars);
+  outline: none;
+}
+
+.bg-jupiter,
+.btn-jupiter.active,
+.li-jupiter::before {
+  background-color: var(--clr-jupiter);
+  outline: none;
+}
+
+.bg-saturn,
+.btn-saturn.active,
+.li-saturn::before {
+  background-color: var(--clr-saturn);
+  outline: none;
+}
+
+.bg-uranus,
+.btn-uranus.active,
+.li-uranus::before {
+  background-color: var(--clr-uranus);
+  outline: none;
+}
+
+.bg-neptune,
+.btn-neptune.active,
+.li-neptune::before {
+  background-color: var(--clr-neptune);
+  outline: none;
+}
+
+.attribution {
+  margin-block: 2rem;
+  text-align: center;
+  color: var(--clr-translucent);
+}
+
+.attribution a {
+  color: #fff;
+}
+
+/* Header styling */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.375rem 2.5rem 1.75rem 2rem;
+  border-bottom: 1px solid var(--clr-translucent);
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 0.25rem;
+  translate: 0 -100%;
+  z-index: 5;
+}
+
+.skip-link:focus {
+  translate: 0 0;
+}
+
+.header-title {
+  font-size: 1.75rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-family: var(--ff-header);
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+li:hover,
+li:focus {
+  opacity: 1;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  height: 4px;
+  top: -85%;
+  left: 0;
+  right: 0;
+  scale: 0 1;
+  transition: scale ease-in-out 150ms;
+}
+
+li:hover::before,
+li:focus::before {
+  scale: 1 1;
+}
+
+/* Planet Page Styling */
+
+.primary-content-container,
+.planet-facts-container {
+  width: 100%;
+  max-width: var(--vw-default);
+  margin-inline: auto;
+  display: flex;
+}
+
+.primary-content-container {
+  margin-top: 13.25rem;
+}
+
+.planet-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 760px;
+}
+
+.geology-img {
+  position: absolute;
+  top: 554px;
+  height: 200px;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.planet-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.opacity-reduced {
+  opacity: 0.5;
+}
+
+.source-link a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Display menu styling */
+
+.display-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Planet facts styling */
+
+.planet-facts-container {
+  margin-top: 5.5rem;
+  gap: 1.875rem;
+}
+
+.info-box {
+  border: 1px solid var(--clr-translucent);
+  padding: 1.25rem 1.5rem 1.75rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-box-title {
+  color: var(--clr-translucent);
+}
