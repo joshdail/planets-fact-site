@@ -1,6 +1,6 @@
 # Frontend Mentor - Planets fact site solution
 
-This is a solution to the [Planets fact site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Planets fact site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -26,11 +26,10 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each planet page and toggle between "Overview", "Internal Structure", and "Surface Geology"
 
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/joshdail/planets-fact-site](https://github.com/joshdail/planets-fact-site)
+- Live Site URL: [https://meek-praline-bb40a7.netlify.app/](https://meek-praline-bb40a7.netlify.app/)
 
 ## My process
 
@@ -83,9 +82,6 @@ return (
 }
 ```
 
-
-
-
 ### Continued development
 
 Continuing to improve in understanding of React (learning hooks and also learning where to break code into separate components), increasing accessibility, and improving organization of CSS stylesheets
@@ -95,7 +91,6 @@ Continuing to improve in understanding of React (learning hooks and also learnin
 - [Daggala](https://www.daggala.com/react-state-not-updating-immediately/) - Blog post that helped me diagnose the issue of React states not setting immediately
 - [Dave Ceddia](https://daveceddia.com/react-before-render/) - Blog article that helped me with setting up conditional rendering (preventing React from trying to render components before the data was loaded and set in state)
 - [Dev.to blog post](https://dev.to/nicm42/fading-in-and-fading-out-with-css-transitions-3lc1) - Blog article that helped me with setting up the fade in/out for the mobile navbar
-
 
 ## Author
 
