@@ -7,6 +7,7 @@ export default function Header(props) {
     return props.planetNames.map((planetName, index) => {
       return (
         <li
+          tabindex={0}
           data-index={index}
           className={`li-${props.theme}`}
           onClick={e => handleClick(e, index)}
