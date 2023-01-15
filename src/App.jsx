@@ -13,7 +13,6 @@ function App() {
       .then(res => res.json())
       .then(jsonArray => {
         setData(jsonArray)
-        console.log(jsonArray)
         setPlanetNames(jsonArray.map(entry => entry.name.toLowerCase()))
         setSelectedPlanet(jsonArray[0])
         setTheme(jsonArray[0].name.toLowerCase())
@@ -25,6 +24,18 @@ function App() {
     setTheme(data[index].name.toLowerCase())
   }
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 720)
+
+  useEffect(() => {
+    function updateIsMobile() {
+      setIsMobile(window.innerWidth < 720)
+    }
+    window.addEventListener("resize", updateIsMobile)
+    return () => {
+      window.removeEventListener("resize", updateIsMobile)
+    }
+  }, [])
+
   return (
     <>
       {/* Force React to wait for the data before rendering components */}
@@ -33,10 +44,11 @@ function App() {
           theme={theme}
           planetNames={planetNames}
           loadPlanetPage={loadPlanetPage}
+          isMobile={isMobile}
         />
       )}
       {theme && planetNames && selectedPlanet && (
-        <PlanetPage theme={theme} data={selectedPlanet} />
+        <PlanetPage theme={theme} data={selectedPlanet} isMobile={isMobile} />
       )}
     </>
   )

@@ -25,7 +25,7 @@ export default function PlanetOverview(props) {
   return (
     <div className="planet-overview">
       <h1>{props.data.name}</h1>
-      <p>{loadText()}</p>
+      <p className="planet-overview-text">{loadText()}</p>
       <p className="source-link">
         <span className="opacity-reduced">
           Source&nbsp;:&nbsp;

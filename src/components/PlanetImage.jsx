@@ -7,6 +7,7 @@ export default function PlanetImage(props) {
   return (
     <div className="planet-img-container">
       <img
+        key={Math.random()}
         className="planet-img"
         src={
           props.displayMode === DISPLAY_INTERNAL
