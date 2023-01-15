@@ -14,9 +14,18 @@ export default function PlanetImage(props) {
             ? `./img/planet-${props.theme}-internal.svg`
             : `./img/planet-${props.theme}.svg`
         }
+        alt={
+          props.displayMode === DISPLAY_INTERNAL
+            ? `Internal structure of planet ${props.theme}`
+            : `Planet ${props.theme}`
+        }
       />
       {props.displayMode === DISPLAY_GEOLOGY && (
-        <img className="geology-img" src={`./img/geology-${props.theme}.png`} />
+        <img
+          className="geology-img"
+          src={`./img/geology-${props.theme}.png`}
+          alt={`Geology of planet ${props.theme}`}
+        />
       )}
     </div>
   )
